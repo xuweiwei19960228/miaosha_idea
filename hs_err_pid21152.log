@@ -1,0 +1,544 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1046736 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:390), pid=21152, tid=0x00000000000016d4
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_131-b11) (build 1.8.0_131-b11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001e623800):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=5844, stack(0x000000001eb90000,0x000000001ec90000)]
+
+Stack: [0x000000001eb90000,0x000000001ec90000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+Current CompileTask:
+C2:  13489 4800       4       com.alibaba.fastjson.asm.MethodWriter::visitMethodInsn (102 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000023784800 JavaThread "Druid-ConnectionPool-Destory-862071038" daemon [_thread_blocked, id=36908, stack(0x0000000035150000,0x0000000035250000)]
+  0x0000000023789800 JavaThread "Druid-ConnectionPool-Create-862071038" daemon [_thread_in_vm, id=36904, stack(0x0000000035050000,0x0000000035150000)]
+  0x0000000023789000 JavaThread "Abandoned connection cleanup thread" daemon [_thread_blocked, id=36900, stack(0x0000000034a20000,0x0000000034b20000)]
+  0x0000000023787800 JavaThread "http-nio-8080-exec-200" daemon [_thread_blocked, id=21488, stack(0x0000000034720000,0x0000000034820000)]
+  0x0000000023786000 JavaThread "http-nio-8080-exec-199" daemon [_thread_blocked, id=16412, stack(0x0000000034620000,0x0000000034720000)]
+  0x0000000023786800 JavaThread "http-nio-8080-exec-198" daemon [_thread_blocked, id=32176, stack(0x0000000034520000,0x0000000034620000)]
+  0x000000002378a800 JavaThread "http-nio-8080-exec-197" daemon [_thread_blocked, id=20216, stack(0x0000000034420000,0x0000000034520000)]
+  0x0000000023783800 JavaThread "http-nio-8080-exec-196" daemon [_thread_blocked, id=35908, stack(0x0000000034320000,0x0000000034420000)]
+  0x0000000023785000 JavaThread "http-nio-8080-exec-195" daemon [_thread_blocked, id=17080, stack(0x0000000034220000,0x0000000034320000)]
+  0x000000002377c000 JavaThread "http-nio-8080-exec-192" daemon [_thread_blocked, id=23888, stack(0x0000000034120000,0x0000000034220000)]
+  0x0000000023783000 JavaThread "http-nio-8080-exec-194" daemon [_thread_blocked, id=30344, stack(0x0000000034020000,0x0000000034120000)]
+  0x000000002377f000 JavaThread "http-nio-8080-exec-193" daemon [_thread_blocked, id=26064, stack(0x0000000033f20000,0x0000000034020000)]
+  0x000000002377d800 JavaThread "http-nio-8080-exec-191" daemon [_thread_blocked, id=22064, stack(0x0000000033e20000,0x0000000033f20000)]
+  0x000000002377d000 JavaThread "http-nio-8080-exec-190" daemon [_thread_blocked, id=15720, stack(0x0000000033d20000,0x0000000033e20000)]
+  0x000000002377e800 JavaThread "http-nio-8080-exec-189" daemon [_thread_blocked, id=19712, stack(0x0000000033c20000,0x0000000033d20000)]
+  0x000000002377b800 JavaThread "http-nio-8080-exec-188" daemon [_thread_blocked, id=33256, stack(0x0000000033b20000,0x0000000033c20000)]
+  0x0000000023782000 JavaThread "http-nio-8080-exec-187" daemon [_thread_blocked, id=20320, stack(0x0000000033a20000,0x0000000033b20000)]
+  0x000000002377a800 JavaThread "http-nio-8080-exec-186" daemon [_thread_blocked, id=16712, stack(0x0000000033920000,0x0000000033a20000)]
+  0x0000000023781800 JavaThread "http-nio-8080-exec-185" daemon [_thread_blocked, id=26120, stack(0x0000000033820000,0x0000000033920000)]
+  0x0000000023780000 JavaThread "http-nio-8080-exec-184" daemon [_thread_blocked, id=33180, stack(0x0000000033720000,0x0000000033820000)]
+  0x000000002377a000 JavaThread "http-nio-8080-exec-183" daemon [_thread_blocked, id=28772, stack(0x0000000033620000,0x0000000033720000)]
+  0x0000000023780800 JavaThread "http-nio-8080-exec-182" daemon [_thread_blocked, id=12356, stack(0x0000000033520000,0x0000000033620000)]
+  0x0000000023777000 JavaThread "http-nio-8080-exec-181" daemon [_thread_blocked, id=10808, stack(0x0000000033420000,0x0000000033520000)]
+  0x0000000023776000 JavaThread "http-nio-8080-exec-175" daemon [_thread_blocked, id=31708, stack(0x0000000033320000,0x0000000033420000)]
+  0x0000000023777800 JavaThread "http-nio-8080-exec-180" daemon [_thread_blocked, id=27708, stack(0x0000000033220000,0x0000000033320000)]
+  0x0000000023779000 JavaThread "http-nio-8080-exec-179" daemon [_thread_blocked, id=27460, stack(0x0000000033120000,0x0000000033220000)]
+  0x0000000023775800 JavaThread "http-nio-8080-exec-178" daemon [_thread_blocked, id=18140, stack(0x0000000033020000,0x0000000033120000)]
+  0x0000000023778800 JavaThread "http-nio-8080-exec-177" daemon [_thread_blocked, id=34516, stack(0x0000000032f20000,0x0000000033020000)]
+  0x000000002388e800 JavaThread "http-nio-8080-exec-176" daemon [_thread_blocked, id=16840, stack(0x0000000032e20000,0x0000000032f20000)]
+  0x000000002388d000 JavaThread "http-nio-8080-exec-170" daemon [_thread_blocked, id=30356, stack(0x0000000032d20000,0x0000000032e20000)]
+  0x000000002388c800 JavaThread "http-nio-8080-exec-174" daemon [_thread_blocked, id=13432, stack(0x0000000032c20000,0x0000000032d20000)]
+  0x000000002388b800 JavaThread "http-nio-8080-exec-173" daemon [_thread_blocked, id=33888, stack(0x0000000032b20000,0x0000000032c20000)]
+  0x000000002388f800 JavaThread "http-nio-8080-exec-172" daemon [_thread_blocked, id=31324, stack(0x0000000032a20000,0x0000000032b20000)]
+  0x000000002388a000 JavaThread "http-nio-8080-exec-171" daemon [_thread_blocked, id=35836, stack(0x0000000032920000,0x0000000032a20000)]
+  0x000000002388e000 JavaThread "http-nio-8080-exec-168" daemon [_thread_blocked, id=28536, stack(0x0000000032820000,0x0000000032920000)]
+  0x0000000023889800 JavaThread "http-nio-8080-exec-169" daemon [_thread_blocked, id=36044, stack(0x0000000032720000,0x0000000032820000)]
+  0x000000002388b000 JavaThread "http-nio-8080-exec-164" daemon [_thread_blocked, id=26932, stack(0x0000000032620000,0x0000000032720000)]
+  0x0000000023882000 JavaThread "http-nio-8080-exec-167" daemon [_thread_blocked, id=4752, stack(0x0000000032520000,0x0000000032620000)]
+  0x0000000023888000 JavaThread "http-nio-8080-exec-166" daemon [_thread_blocked, id=15220, stack(0x0000000032420000,0x0000000032520000)]
+  0x0000000023886800 JavaThread "http-nio-8080-exec-165" daemon [_thread_blocked, id=21864, stack(0x0000000032320000,0x0000000032420000)]
+  0x0000000023888800 JavaThread "http-nio-8080-exec-163" daemon [_thread_blocked, id=4544, stack(0x0000000032220000,0x0000000032320000)]
+  0x0000000023880800 JavaThread "http-nio-8080-exec-162" daemon [_thread_blocked, id=27420, stack(0x0000000032120000,0x0000000032220000)]
+  0x0000000023885000 JavaThread "http-nio-8080-exec-161" daemon [_thread_blocked, id=10756, stack(0x0000000032020000,0x0000000032120000)]
+  0x0000000023884000 JavaThread "http-nio-8080-exec-160" daemon [_thread_blocked, id=30996, stack(0x0000000031f20000,0x0000000032020000)]
+  0x0000000023883800 JavaThread "http-nio-8080-exec-159" daemon [_thread_blocked, id=12628, stack(0x0000000031e20000,0x0000000031f20000)]
+  0x0000000023882800 JavaThread "http-nio-8080-exec-158" daemon [_thread_blocked, id=29544, stack(0x0000000031d20000,0x0000000031e20000)]
+  0x0000000023885800 JavaThread "http-nio-8080-exec-157" daemon [_thread_blocked, id=8052, stack(0x0000000031c20000,0x0000000031d20000)]
+  0x0000000023881000 JavaThread "http-nio-8080-exec-156" daemon [_thread_blocked, id=20524, stack(0x0000000031b20000,0x0000000031c20000)]
+  0x0000000023887000 JavaThread "http-nio-8080-exec-155" daemon [_thread_blocked, id=26032, stack(0x0000000031a20000,0x0000000031b20000)]
+  0x00000000203c6800 JavaThread "http-nio-8080-exec-154" daemon [_thread_blocked, id=4460, stack(0x0000000031920000,0x0000000031a20000)]
+  0x00000000203c5000 JavaThread "http-nio-8080-exec-153" daemon [_thread_blocked, id=35460, stack(0x0000000031820000,0x0000000031920000)]
+  0x00000000203c4800 JavaThread "http-nio-8080-exec-152" daemon [_thread_blocked, id=33264, stack(0x0000000031720000,0x0000000031820000)]
+  0x00000000203c6000 JavaThread "http-nio-8080-exec-151" daemon [_thread_blocked, id=10964, stack(0x0000000031620000,0x0000000031720000)]
+  0x00000000203c1800 JavaThread "http-nio-8080-exec-150" daemon [_thread_blocked, id=31060, stack(0x0000000031520000,0x0000000031620000)]
+  0x00000000203c2000 JavaThread "http-nio-8080-exec-149" daemon [_thread_blocked, id=5776, stack(0x0000000031420000,0x0000000031520000)]
+  0x00000000203c8000 JavaThread "http-nio-8080-exec-148" daemon [_thread_blocked, id=29956, stack(0x0000000031320000,0x0000000031420000)]
+  0x00000000203c7800 JavaThread "http-nio-8080-exec-147" daemon [_thread_blocked, id=36280, stack(0x0000000031220000,0x0000000031320000)]
+  0x00000000203c3800 JavaThread "http-nio-8080-exec-146" daemon [_thread_blocked, id=18832, stack(0x0000000031120000,0x0000000031220000)]
+  0x00000000203c3000 JavaThread "http-nio-8080-exec-145" daemon [_thread_blocked, id=34212, stack(0x0000000031020000,0x0000000031120000)]
+  0x00000000203ba000 JavaThread "http-nio-8080-exec-144" daemon [_thread_blocked, id=22180, stack(0x0000000030f20000,0x0000000031020000)]
+  0x00000000203c0800 JavaThread "http-nio-8080-exec-143" daemon [_thread_blocked, id=33636, stack(0x0000000030e20000,0x0000000030f20000)]
+  0x00000000203b9000 JavaThread "http-nio-8080-exec-142" daemon [_thread_blocked, id=8300, stack(0x0000000030d20000,0x0000000030e20000)]
+  0x00000000203c0000 JavaThread "http-nio-8080-exec-141" daemon [_thread_blocked, id=21316, stack(0x0000000030c20000,0x0000000030d20000)]
+  0x00000000203bf000 JavaThread "http-nio-8080-exec-140" daemon [_thread_blocked, id=18092, stack(0x0000000030b20000,0x0000000030c20000)]
+  0x00000000203bd000 JavaThread "http-nio-8080-exec-139" daemon [_thread_blocked, id=17916, stack(0x0000000030a20000,0x0000000030b20000)]
+  0x00000000203bd800 JavaThread "http-nio-8080-exec-138" daemon [_thread_blocked, id=21440, stack(0x0000000030920000,0x0000000030a20000)]
+  0x00000000203bb800 JavaThread "http-nio-8080-exec-137" daemon [_thread_blocked, id=24592, stack(0x0000000030820000,0x0000000030920000)]
+  0x00000000203bc000 JavaThread "http-nio-8080-exec-136" daemon [_thread_blocked, id=16660, stack(0x0000000030720000,0x0000000030820000)]
+  0x00000000203ba800 JavaThread "http-nio-8080-exec-135" daemon [_thread_blocked, id=9880, stack(0x0000000030620000,0x0000000030720000)]
+  0x00000000203be800 JavaThread "http-nio-8080-exec-134" daemon [_thread_blocked, id=34216, stack(0x0000000030520000,0x0000000030620000)]
+  0x000000001fdbc000 JavaThread "http-nio-8080-exec-133" daemon [_thread_blocked, id=14148, stack(0x0000000030420000,0x0000000030520000)]
+  0x000000001fdbb800 JavaThread "http-nio-8080-exec-132" daemon [_thread_blocked, id=23748, stack(0x0000000030320000,0x0000000030420000)]
+  0x000000001fdba800 JavaThread "http-nio-8080-exec-131" daemon [_thread_blocked, id=29308, stack(0x0000000030220000,0x0000000030320000)]
+  0x000000001fdba000 JavaThread "http-nio-8080-exec-130" daemon [_thread_blocked, id=19812, stack(0x0000000030120000,0x0000000030220000)]
+  0x000000001fdb9000 JavaThread "http-nio-8080-exec-129" daemon [_thread_blocked, id=34624, stack(0x0000000030020000,0x0000000030120000)]
+  0x000000001fdbf000 JavaThread "http-nio-8080-exec-128" daemon [_thread_blocked, id=36112, stack(0x000000002ff20000,0x0000000030020000)]
+  0x000000001fdbd000 JavaThread "http-nio-8080-exec-127" daemon [_thread_blocked, id=24348, stack(0x000000002fe20000,0x000000002ff20000)]
+  0x000000001fdbd800 JavaThread "http-nio-8080-exec-106" daemon [_thread_blocked, id=12364, stack(0x000000002fd20000,0x000000002fe20000)]
+  0x000000001fdbe800 JavaThread "http-nio-8080-exec-126" daemon [_thread_blocked, id=2996, stack(0x000000002fc20000,0x000000002fd20000)]
+  0x000000001fdb1800 JavaThread "http-nio-8080-exec-125" daemon [_thread_blocked, id=21088, stack(0x000000002fb20000,0x000000002fc20000)]
+  0x000000001fdb2000 JavaThread "http-nio-8080-exec-124" daemon [_thread_blocked, id=17072, stack(0x000000002fa20000,0x000000002fb20000)]
+  0x000000001fdb4800 JavaThread "http-nio-8080-exec-123" daemon [_thread_blocked, id=11228, stack(0x000000002f920000,0x000000002fa20000)]
+  0x000000001fdb8800 JavaThread "http-nio-8080-exec-122" daemon [_thread_blocked, id=21884, stack(0x000000002f820000,0x000000002f920000)]
+  0x000000001fdb0800 JavaThread "http-nio-8080-exec-121" daemon [_thread_blocked, id=26468, stack(0x000000002f720000,0x000000002f820000)]
+  0x000000001fdb5800 JavaThread "http-nio-8080-exec-120" daemon [_thread_blocked, id=26532, stack(0x000000002f620000,0x000000002f720000)]
+  0x000000001fdb7800 JavaThread "http-nio-8080-exec-119" daemon [_thread_blocked, id=34380, stack(0x000000002f520000,0x000000002f620000)]
+  0x000000001fdb0000 JavaThread "http-nio-8080-exec-118" daemon [_thread_blocked, id=23916, stack(0x000000002f420000,0x000000002f520000)]
+  0x000000001fdb6000 JavaThread "http-nio-8080-exec-117" daemon [_thread_blocked, id=19572, stack(0x000000002f320000,0x000000002f420000)]
+  0x000000001fdb7000 JavaThread "http-nio-8080-exec-116" daemon [_thread_blocked, id=35680, stack(0x000000002f220000,0x000000002f320000)]
+  0x000000001fdb4000 JavaThread "http-nio-8080-exec-115" daemon [_thread_blocked, id=22092, stack(0x000000002f120000,0x000000002f220000)]
+  0x000000001fdb3000 JavaThread "http-nio-8080-exec-114" daemon [_thread_blocked, id=24196, stack(0x000000002f020000,0x000000002f120000)]
+  0x00000000234bb000 JavaThread "http-nio-8080-exec-113" daemon [_thread_blocked, id=24076, stack(0x000000002ef20000,0x000000002f020000)]
+  0x00000000234b8000 JavaThread "http-nio-8080-exec-112" daemon [_thread_blocked, id=17364, stack(0x000000002ee20000,0x000000002ef20000)]
+  0x00000000234b7000 JavaThread "http-nio-8080-exec-111" daemon [_thread_blocked, id=24164, stack(0x000000002ed20000,0x000000002ee20000)]
+  0x00000000234b6800 JavaThread "http-nio-8080-exec-110" daemon [_thread_blocked, id=34280, stack(0x000000002ec20000,0x000000002ed20000)]
+  0x00000000234b5800 JavaThread "http-nio-8080-exec-109" daemon [_thread_blocked, id=35488, stack(0x000000002eb20000,0x000000002ec20000)]
+  0x00000000234bb800 JavaThread "http-nio-8080-exec-108" daemon [_thread_blocked, id=25948, stack(0x000000002ea20000,0x000000002eb20000)]
+  0x00000000234ba000 JavaThread "http-nio-8080-exec-107" daemon [_thread_blocked, id=36308, stack(0x000000002e920000,0x000000002ea20000)]
+  0x00000000234b9800 JavaThread "http-nio-8080-exec-105" daemon [_thread_blocked, id=9592, stack(0x000000002e820000,0x000000002e920000)]
+  0x00000000234b8800 JavaThread "http-nio-8080-exec-104" daemon [_thread_blocked, id=35236, stack(0x000000002e620000,0x000000002e720000)]
+  0x00000000234ae000 JavaThread "http-nio-8080-exec-103" daemon [_thread_blocked, id=28336, stack(0x000000002e520000,0x000000002e620000)]
+  0x00000000234b5000 JavaThread "http-nio-8080-exec-102" daemon [_thread_blocked, id=30920, stack(0x000000002e420000,0x000000002e520000)]
+  0x00000000234b2800 JavaThread "http-nio-8080-exec-101" daemon [_thread_blocked, id=32948, stack(0x000000002e320000,0x000000002e420000)]
+  0x00000000234af000 JavaThread "http-nio-8080-exec-100" daemon [_thread_blocked, id=18924, stack(0x000000002e220000,0x000000002e320000)]
+  0x00000000234b2000 JavaThread "http-nio-8080-exec-87" daemon [_thread_blocked, id=14408, stack(0x000000002e120000,0x000000002e220000)]
+  0x00000000234ad800 JavaThread "http-nio-8080-exec-99" daemon [_thread_blocked, id=18920, stack(0x000000002e020000,0x000000002e120000)]
+  0x00000000234b4000 JavaThread "http-nio-8080-exec-98" daemon [_thread_blocked, id=33456, stack(0x000000002df20000,0x000000002e020000)]
+  0x00000000234b0800 JavaThread "http-nio-8080-exec-97" daemon [_thread_blocked, id=36180, stack(0x000000002de20000,0x000000002df20000)]
+  0x00000000234af800 JavaThread "http-nio-8080-exec-96" daemon [_thread_blocked, id=23096, stack(0x000000002dd20000,0x000000002de20000)]
+  0x00000000234b3800 JavaThread "http-nio-8080-exec-95" daemon [_thread_blocked, id=12192, stack(0x000000002dc20000,0x000000002dd20000)]
+  0x00000000234b1000 JavaThread "http-nio-8080-exec-94" daemon [_thread_blocked, id=12696, stack(0x000000002db20000,0x000000002dc20000)]
+  0x00000000234ac800 JavaThread "http-nio-8080-exec-93" daemon [_thread_blocked, id=28176, stack(0x000000002da20000,0x000000002db20000)]
+  0x00000000234cc800 JavaThread "http-nio-8080-exec-92" daemon [_thread_blocked, id=19364, stack(0x000000002d920000,0x000000002da20000)]
+  0x00000000234cb800 JavaThread "http-nio-8080-exec-91" daemon [_thread_blocked, id=27276, stack(0x000000002d820000,0x000000002d920000)]
+  0x00000000234cb000 JavaThread "http-nio-8080-exec-90" daemon [_thread_blocked, id=20880, stack(0x000000002d720000,0x000000002d820000)]
+  0x00000000234cd000 JavaThread "http-nio-8080-exec-89" daemon [_thread_blocked, id=17520, stack(0x000000002d620000,0x000000002d720000)]
+  0x00000000234c3800 JavaThread "http-nio-8080-exec-88" daemon [_thread_blocked, id=30588, stack(0x000000002d520000,0x000000002d620000)]
+  0x00000000234c6800 JavaThread "http-nio-8080-exec-86" daemon [_thread_blocked, id=2804, stack(0x000000002d420000,0x000000002d520000)]
+  0x00000000234ca000 JavaThread "http-nio-8080-exec-71" daemon [_thread_blocked, id=3144, stack(0x000000002d320000,0x000000002d420000)]
+  0x00000000234c5800 JavaThread "http-nio-8080-exec-85" daemon [_thread_blocked, id=19672, stack(0x000000002d220000,0x000000002d320000)]
+  0x00000000234c8000 JavaThread "http-nio-8080-exec-84" daemon [_thread_blocked, id=15228, stack(0x000000002d120000,0x000000002d220000)]
+  0x00000000234c8800 JavaThread "http-nio-8080-exec-83" daemon [_thread_blocked, id=24268, stack(0x000000002d020000,0x000000002d120000)]
+  0x00000000234c9800 JavaThread "http-nio-8080-exec-82" daemon [_thread_blocked, id=35588, stack(0x000000002cf20000,0x000000002d020000)]
+  0x00000000234c0800 JavaThread "http-nio-8080-exec-81" daemon [_thread_blocked, id=4712, stack(0x000000002ce20000,0x000000002cf20000)]
+  0x00000000234c2000 JavaThread "http-nio-8080-exec-80" daemon [_thread_blocked, id=25904, stack(0x000000002cd20000,0x000000002ce20000)]
+  0x00000000234c5000 JavaThread "http-nio-8080-exec-79" daemon [_thread_blocked, id=21936, stack(0x000000002cc20000,0x000000002cd20000)]
+  0x00000000234c4000 JavaThread "http-nio-8080-exec-78" daemon [_thread_blocked, id=32992, stack(0x000000002cb20000,0x000000002cc20000)]
+  0x00000000234c2800 JavaThread "http-nio-8080-exec-77" daemon [_thread_blocked, id=16696, stack(0x000000002ca20000,0x000000002cb20000)]
+  0x00000000234c7000 JavaThread "http-nio-8080-exec-76" daemon [_thread_blocked, id=16684, stack(0x000000002c920000,0x000000002ca20000)]
+  0x00000000234c1000 JavaThread "http-nio-8080-exec-75" daemon [_thread_blocked, id=33956, stack(0x000000002c820000,0x000000002c920000)]
+  0x00000000234be000 JavaThread "http-nio-8080-exec-74" daemon [_thread_blocked, id=31340, stack(0x000000002c720000,0x000000002c820000)]
+  0x00000000234bf800 JavaThread "http-nio-8080-exec-73" daemon [_thread_blocked, id=36712, stack(0x000000002c620000,0x000000002c720000)]
+  0x00000000234bf000 JavaThread "http-nio-8080-exec-72" daemon [_thread_blocked, id=35304, stack(0x000000002c520000,0x000000002c620000)]
+  0x0000000020084000 JavaThread "http-nio-8080-exec-70" daemon [_thread_blocked, id=29024, stack(0x000000002c420000,0x000000002c520000)]
+  0x0000000020082800 JavaThread "http-nio-8080-exec-69" daemon [_thread_blocked, id=16372, stack(0x000000002c320000,0x000000002c420000)]
+  0x0000000020081800 JavaThread "http-nio-8080-exec-68" daemon [_thread_blocked, id=1592, stack(0x000000002c220000,0x000000002c320000)]
+  0x0000000020083000 JavaThread "http-nio-8080-exec-67" daemon [_thread_blocked, id=9300, stack(0x000000002c120000,0x000000002c220000)]
+  0x0000000020081000 JavaThread "http-nio-8080-exec-66" daemon [_thread_blocked, id=31896, stack(0x000000002c020000,0x000000002c120000)]
+  0x0000000020080000 JavaThread "http-nio-8080-exec-65" daemon [_thread_blocked, id=22900, stack(0x000000002bf20000,0x000000002c020000)]
+  0x0000000020078800 JavaThread "http-nio-8080-exec-64" daemon [_thread_blocked, id=33968, stack(0x000000002be20000,0x000000002bf20000)]
+  0x000000002007e800 JavaThread "http-nio-8080-exec-63" daemon [_thread_blocked, id=17780, stack(0x000000002bd20000,0x000000002be20000)]
+  0x0000000020079800 JavaThread "http-nio-8080-exec-62" daemon [_thread_blocked, id=16112, stack(0x000000002bc20000,0x000000002bd20000)]
+  0x000000002007e000 JavaThread "http-nio-8080-exec-61" daemon [_thread_blocked, id=36108, stack(0x000000002bb20000,0x000000002bc20000)]
+  0x000000002007f800 JavaThread "http-nio-8080-exec-60" daemon [_thread_blocked, id=13952, stack(0x000000002ba20000,0x000000002bb20000)]
+  0x0000000020078000 JavaThread "http-nio-8080-exec-59" daemon [_thread_blocked, id=8984, stack(0x000000002b920000,0x000000002ba20000)]
+  0x000000002007b000 JavaThread "http-nio-8080-exec-58" daemon [_thread_blocked, id=8720, stack(0x000000002b820000,0x000000002b920000)]
+  0x000000002007d000 JavaThread "http-nio-8080-exec-57" daemon [_thread_blocked, id=29096, stack(0x000000002b720000,0x000000002b820000)]
+  0x000000002007b800 JavaThread "http-nio-8080-exec-56" daemon [_thread_blocked, id=2776, stack(0x000000002b620000,0x000000002b720000)]
+  0x0000000020075800 JavaThread "http-nio-8080-exec-55" daemon [_thread_blocked, id=4312, stack(0x000000002b520000,0x000000002b620000)]
+  0x0000000020077000 JavaThread "http-nio-8080-exec-54" daemon [_thread_blocked, id=23480, stack(0x000000002b420000,0x000000002b520000)]
+  0x0000000020076800 JavaThread "http-nio-8080-exec-53" daemon [_thread_blocked, id=31160, stack(0x000000002b320000,0x000000002b420000)]
+  0x000000002007c800 JavaThread "http-nio-8080-exec-52" daemon [_thread_blocked, id=25796, stack(0x000000002b220000,0x000000002b320000)]
+  0x0000000020075000 JavaThread "http-nio-8080-exec-51" daemon [_thread_blocked, id=9748, stack(0x000000002b120000,0x000000002b220000)]
+  0x000000002007a000 JavaThread "http-nio-8080-exec-50" daemon [_thread_blocked, id=28616, stack(0x000000002b020000,0x000000002b120000)]
+  0x00000000235bd800 JavaThread "http-nio-8080-exec-49" daemon [_thread_blocked, id=35904, stack(0x000000002af20000,0x000000002b020000)]
+  0x00000000235bc800 JavaThread "http-nio-8080-exec-48" daemon [_thread_blocked, id=3840, stack(0x000000002ae20000,0x000000002af20000)]
+  0x00000000235bb000 JavaThread "http-nio-8080-exec-47" daemon [_thread_blocked, id=3140, stack(0x000000002ad20000,0x000000002ae20000)]
+  0x00000000235ba800 JavaThread "http-nio-8080-exec-46" daemon [_thread_blocked, id=3384, stack(0x000000002ac20000,0x000000002ad20000)]
+  0x00000000235bc000 JavaThread "http-nio-8080-exec-45" daemon [_thread_blocked, id=33860, stack(0x000000002ab20000,0x000000002ac20000)]
+  0x00000000235b9800 JavaThread "http-nio-8080-exec-44" daemon [_thread_blocked, id=33556, stack(0x000000002aa20000,0x000000002ab20000)]
+  0x00000000235b9000 JavaThread "http-nio-8080-exec-43" daemon [_thread_blocked, id=16892, stack(0x000000002a920000,0x000000002aa20000)]
+  0x00000000235b1800 JavaThread "http-nio-8080-exec-42" daemon [_thread_blocked, id=27892, stack(0x000000002a820000,0x000000002a920000)]
+  0x00000000235b8000 JavaThread "http-nio-8080-exec-41" daemon [_thread_blocked, id=7080, stack(0x000000002a720000,0x000000002a820000)]
+  0x00000000235b0800 JavaThread "http-nio-8080-exec-40" daemon [_thread_blocked, id=27716, stack(0x000000002a620000,0x000000002a720000)]
+  0x00000000235b7800 JavaThread "http-nio-8080-exec-39" daemon [_thread_blocked, id=13208, stack(0x000000002a520000,0x000000002a620000)]
+  0x00000000235b6800 JavaThread "http-nio-8080-exec-38" daemon [_thread_blocked, id=1756, stack(0x000000002a420000,0x000000002a520000)]
+  0x00000000235af000 JavaThread "http-nio-8080-exec-37" daemon [_thread_blocked, id=32060, stack(0x000000002a320000,0x000000002a420000)]
+  0x00000000235b2000 JavaThread "http-nio-8080-exec-36" daemon [_thread_blocked, id=33652, stack(0x000000002a220000,0x000000002a320000)]
+  0x00000000235b6000 JavaThread "http-nio-8080-exec-35" daemon [_thread_blocked, id=27296, stack(0x000000002a120000,0x000000002a220000)]
+  0x00000000235b3800 JavaThread "http-nio-8080-exec-34" daemon [_thread_blocked, id=26316, stack(0x000000002a020000,0x000000002a120000)]
+  0x00000000235b3000 JavaThread "http-nio-8080-exec-33" daemon [_thread_blocked, id=16656, stack(0x0000000029f20000,0x000000002a020000)]
+  0x00000000235ae800 JavaThread "http-nio-8080-exec-32" daemon [_thread_blocked, id=27352, stack(0x0000000029e20000,0x0000000029f20000)]
+  0x00000000235b5000 JavaThread "http-nio-8080-exec-31" daemon [_thread_blocked, id=7012, stack(0x0000000029d20000,0x0000000029e20000)]
+  0x00000000235b0000 JavaThread "http-nio-8080-exec-30" daemon [_thread_blocked, id=19960, stack(0x0000000029c20000,0x0000000029d20000)]
+  0x00000000235b4800 JavaThread "http-nio-8080-exec-29" daemon [_thread_blocked, id=34420, stack(0x0000000029b20000,0x0000000029c20000)]
+  0x000000002374c000 JavaThread "http-nio-8080-exec-28" daemon [_thread_blocked, id=14560, stack(0x0000000029a20000,0x0000000029b20000)]
+  0x0000000023750800 JavaThread "http-nio-8080-exec-27" daemon [_thread_blocked, id=19648, stack(0x0000000029920000,0x0000000029a20000)]
+  0x0000000023750000 JavaThread "http-nio-8080-exec-26" daemon [_thread_blocked, id=27332, stack(0x0000000029820000,0x0000000029920000)]
+  0x000000002374d000 JavaThread "http-nio-8080-exec-25" daemon [_thread_blocked, id=2964, stack(0x0000000029720000,0x0000000029820000)]
+  0x000000002374b800 JavaThread "http-nio-8080-exec-24" daemon [_thread_blocked, id=23040, stack(0x0000000029620000,0x0000000029720000)]
+  0x000000002374f000 JavaThread "http-nio-8080-exec-23" daemon [_thread_blocked, id=19576, stack(0x0000000029520000,0x0000000029620000)]
+  0x0000000023751800 JavaThread "http-nio-8080-exec-22" daemon [_thread_blocked, id=28904, stack(0x0000000029420000,0x0000000029520000)]
+  0x000000002374e800 JavaThread "http-nio-8080-exec-21" daemon [_thread_blocked, id=28044, stack(0x0000000029320000,0x0000000029420000)]
+  0x000000002374d800 JavaThread "http-nio-8080-exec-20" daemon [_thread_blocked, id=18060, stack(0x0000000029220000,0x0000000029320000)]
+  0x0000000023744000 JavaThread "http-nio-8080-exec-19" daemon [_thread_blocked, id=18488, stack(0x00000000280b0000,0x00000000281b0000)]
+  0x0000000023744800 JavaThread "http-nio-8080-exec-18" daemon [_thread_blocked, id=19268, stack(0x0000000027fb0000,0x00000000280b0000)]
+  0x000000002374a800 JavaThread "http-nio-8080-exec-17" daemon [_thread_blocked, id=14808, stack(0x0000000027eb0000,0x0000000027fb0000)]
+  0x000000002374a000 JavaThread "http-nio-8080-exec-16" daemon [_thread_blocked, id=31800, stack(0x0000000027db0000,0x0000000027eb0000)]
+  0x0000000023743000 JavaThread "http-nio-8080-exec-15" daemon [_thread_blocked, id=30704, stack(0x0000000027cb0000,0x0000000027db0000)]
+  0x0000000023742800 JavaThread "http-nio-8080-exec-14" daemon [_thread_blocked, id=34892, stack(0x0000000027bb0000,0x0000000027cb0000)]
+  0x0000000023749000 JavaThread "http-nio-8080-exec-13" daemon [_thread_blocked, id=28088, stack(0x0000000027ab0000,0x0000000027bb0000)]
+  0x0000000023747800 JavaThread "http-nio-8080-exec-12" daemon [_thread_blocked, id=32156, stack(0x00000000279b0000,0x0000000027ab0000)]
+  0x0000000023746000 JavaThread "http-nio-8080-exec-11" daemon [_thread_blocked, id=29652, stack(0x00000000278b0000,0x00000000279b0000)]
+  0x0000000023748800 JavaThread "DestroyJavaVM" [_thread_blocked, id=32248, stack(0x00000000026e0000,0x00000000027e0000)]
+  0x0000000023747000 JavaThread "http-nio-8080-AsyncTimeout" daemon [_thread_blocked, id=35296, stack(0x00000000277b0000,0x00000000278b0000)]
+  0x0000000023745800 JavaThread "http-nio-8080-Acceptor-0" daemon [_thread_in_native, id=34716, stack(0x00000000276b0000,0x00000000277b0000)]
+  0x0000000024256000 JavaThread "http-nio-8080-ClientPoller-1" daemon [_thread_in_native, id=15868, stack(0x00000000275b0000,0x00000000276b0000)]
+  0x0000000024257800 JavaThread "http-nio-8080-ClientPoller-0" daemon [_thread_in_native, id=32268, stack(0x00000000274b0000,0x00000000275b0000)]
+  0x0000000024255000 JavaThread "http-nio-8080-exec-10" daemon [_thread_blocked, id=35480, stack(0x00000000273b0000,0x00000000274b0000)]
+  0x0000000024254800 JavaThread "http-nio-8080-exec-9" daemon [_thread_blocked, id=23180, stack(0x00000000272b0000,0x00000000273b0000)]
+  0x000000002425b000 JavaThread "http-nio-8080-exec-8" daemon [_thread_blocked, id=30468, stack(0x00000000271b0000,0x00000000272b0000)]
+  0x000000002425a800 JavaThread "http-nio-8080-exec-7" daemon [_thread_blocked, id=19172, stack(0x00000000270b0000,0x00000000271b0000)]
+  0x0000000024258000 JavaThread "http-nio-8080-exec-6" daemon [_thread_blocked, id=25916, stack(0x0000000026fb0000,0x00000000270b0000)]
+  0x0000000024259000 JavaThread "http-nio-8080-exec-5" daemon [_thread_blocked, id=20576, stack(0x0000000026eb0000,0x0000000026fb0000)]
+  0x0000000024256800 JavaThread "http-nio-8080-exec-4" daemon [_thread_blocked, id=29704, stack(0x0000000026db0000,0x0000000026eb0000)]
+  0x0000000024259800 JavaThread "http-nio-8080-exec-3" daemon [_thread_blocked, id=28676, stack(0x0000000026cb0000,0x0000000026db0000)]
+  0x000000002003c000 JavaThread "http-nio-8080-exec-2" daemon [_thread_blocked, id=24616, stack(0x0000000026ab0000,0x0000000026bb0000)]
+  0x0000000023abf800 JavaThread "http-nio-8080-exec-1" daemon [_thread_blocked, id=36392, stack(0x0000000026700000,0x0000000026800000)]
+  0x000000002347a800 JavaThread "NioBlockingSelector.BlockPoller-1" daemon [_thread_in_native, id=16704, stack(0x0000000026100000,0x0000000026200000)]
+  0x0000000024814800 JavaThread "commons-pool-evictor-thread" [_thread_blocked, id=12664, stack(0x0000000026200000,0x0000000026300000)]
+  0x0000000023741800 JavaThread "container-0" [_thread_blocked, id=35364, stack(0x0000000025e00000,0x0000000025f00000)]
+  0x00000000213fa800 JavaThread "ContainerBackgroundProcessor[StandardEngine[Tomcat]]" daemon [_thread_blocked, id=30056, stack(0x0000000023ad0000,0x0000000023bd0000)]
+  0x000000002158f000 JavaThread "localhost-startStop-1" daemon [_thread_blocked, id=11480, stack(0x00000000229e0000,0x0000000022ae0000)]
+  0x000000002158e000 JavaThread "Tomcat-startStop-1" daemon [_thread_blocked, id=36820, stack(0x0000000020910000,0x0000000020a10000)]
+  0x000000001eee0000 JavaThread "Service Thread" daemon [_thread_blocked, id=35152, stack(0x000000001f690000,0x000000001f790000)]
+  0x000000001e627000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=21848, stack(0x000000001ed90000,0x000000001ee90000)]
+  0x000000001e624000 JavaThread "C2 CompilerThread2" daemon [_thread_in_native, id=34908, stack(0x000000001ec90000,0x000000001ed90000)]
+=>0x000000001e623800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=5844, stack(0x000000001eb90000,0x000000001ec90000)]
+  0x000000001e616800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=31548, stack(0x000000001ea90000,0x000000001eb90000)]
+  0x000000001e609000 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=33552, stack(0x000000001e990000,0x000000001ea90000)]
+  0x000000001e2ca800 JavaThread "Attach Listener" daemon [_thread_blocked, id=35556, stack(0x000000001e890000,0x000000001e990000)]
+  0x000000001e2ca000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=17868, stack(0x000000001e790000,0x000000001e890000)]
+  0x000000001e2b0800 JavaThread "Finalizer" daemon [_thread_blocked, id=32576, stack(0x000000001e690000,0x000000001e790000)]
+  0x0000000002adb000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3256, stack(0x000000001e190000,0x000000001e290000)]
+
+Other Threads:
+  0x000000001c399800 VMThread [stack: 0x000000001e090000,0x000000001e190000] [id=25144]
+  0x000000001e68e800 WatcherThread [stack: 0x000000001f790000,0x000000001f890000] [id=23252]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 256000K, used 190306K [0x000000076c000000, 0x000000077d900000, 0x00000007c0000000)
+  eden space 247296K, 73% used [0x000000076c000000,0x00000007771c2940,0x000000077b180000)
+  from space 8704K, 95% used [0x000000077d080000,0x000000077d896190,0x000000077d900000)
+  to   space 19968K, 0% used [0x000000077b200000,0x000000077b200000,0x000000077c580000)
+ ParOldGen       total 188928K, used 24150K [0x00000006c4000000, 0x00000006cf880000, 0x000000076c000000)
+  object space 188928K, 12% used [0x00000006c4000000,0x00000006c5795858,0x00000006cf880000)
+ Metaspace       used 44061K, capacity 44574K, committed 44848K, reserved 1089536K
+  class space    used 4997K, capacity 5130K, committed 5168K, reserved 1048576K
+
+Card table byte_map: [0x0000000011ea0000,0x0000000012690000] byte_map_base: 0x000000000e880000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006fb5c720
+ Begin Bits: [0x00000000133d0000, 0x00000000172d0000)
+ End Bits:   [0x00000000172d0000, 0x000000001b1d0000)
+
+Polling page: 0x00000000005f0000
+
+CodeCache: size=245760Kb used=17373Kb max_used=17373Kb free=228386Kb
+ bounds [0x0000000002ae0000, 0x0000000003bf0000, 0x0000000011ae0000]
+ total_blobs=5211 nmethods=4489 adapters=634
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 13.432 Thread 0x000000001e627000 5114       3       org.springframework.transaction.support.TransactionSynchronizationUtils::unwrapResourceIfNecessary (38 bytes)
+Event: 13.433 Thread 0x000000001e627000 nmethod 5114 0x00000000037a7590 code [0x00000000037a7760, 0x00000000037a8068]
+Event: 13.437 Thread 0x000000001e627000 5115       1       java.nio.charset.CharsetDecoder::replacement (5 bytes)
+Event: 13.438 Thread 0x000000001e627000 nmethod 5115 0x00000000037a72d0 code [0x00000000037a7420, 0x00000000037a7530]
+Event: 13.438 Thread 0x000000001e627000 5116       1       java.nio.charset.CharsetDecoder::malformedInputAction (5 bytes)
+Event: 13.438 Thread 0x000000001e627000 nmethod 5116 0x00000000037a7010 code [0x00000000037a7160, 0x00000000037a7270]
+Event: 13.439 Thread 0x000000001e627000 5117       3       java.util.Collections$UnmodifiableCollection::contains (11 bytes)
+Event: 13.439 Thread 0x000000001e627000 nmethod 5117 0x00000000037a6bd0 code [0x00000000037a6d40, 0x00000000037a6f68]
+Event: 13.443 Thread 0x000000001e627000 5118       3       sun.nio.cs.UTF_8$Decoder::decode (779 bytes)
+Event: 13.450 Thread 0x000000001e627000 nmethod 5118 0x000000000379ded0 code [0x000000000379e500, 0x00000000037a3318]
+
+GC Heap History (10 events):
+Event: 3.195 GC heap before
+{Heap before GC invocations=4 (full 1):
+ PSYoungGen      total 139776K, used 129024K [0x000000076c000000, 0x0000000775300000, 0x00000007c0000000)
+  eden space 129024K, 100% used [0x000000076c000000,0x0000000773e00000,0x0000000773e00000)
+  from space 10752K, 0% used [0x0000000774880000,0x0000000774880000,0x0000000775300000)
+  to   space 10752K, 0% used [0x0000000773e00000,0x0000000773e00000,0x0000000774880000)
+ ParOldGen       total 111616K, used 9946K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 8% used [0x00000006c4000000,0x00000006c49b6920,0x00000006cad00000)
+ Metaspace       used 28226K, capacity 28590K, committed 28976K, reserved 1075200K
+  class space    used 3440K, capacity 3540K, committed 3632K, reserved 1048576K
+Event: 3.203 GC heap after
+Heap after GC invocations=4 (full 1):
+ PSYoungGen      total 139776K, used 10745K [0x000000076c000000, 0x0000000778200000, 0x00000007c0000000)
+  eden space 129024K, 0% used [0x000000076c000000,0x000000076c000000,0x0000000773e00000)
+  from space 10752K, 99% used [0x0000000773e00000,0x000000077487e588,0x0000000774880000)
+  to   space 10752K, 0% used [0x0000000777780000,0x0000000777780000,0x0000000778200000)
+ ParOldGen       total 111616K, used 13246K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 11% used [0x00000006c4000000,0x00000006c4cef848,0x00000006cad00000)
+ Metaspace       used 28226K, capacity 28590K, committed 28976K, reserved 1075200K
+  class space    used 3440K, capacity 3540K, committed 3632K, reserved 1048576K
+}
+Event: 4.102 GC heap before
+{Heap before GC invocations=5 (full 1):
+ PSYoungGen      total 139776K, used 139769K [0x000000076c000000, 0x0000000778200000, 0x00000007c0000000)
+  eden space 129024K, 100% used [0x000000076c000000,0x0000000773e00000,0x0000000773e00000)
+  from space 10752K, 99% used [0x0000000773e00000,0x000000077487e588,0x0000000774880000)
+  to   space 10752K, 0% used [0x0000000777780000,0x0000000777780000,0x0000000778200000)
+ ParOldGen       total 111616K, used 13246K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 11% used [0x00000006c4000000,0x00000006c4cef848,0x00000006cad00000)
+ Metaspace       used 33571K, capacity 33960K, committed 34224K, reserved 1079296K
+  class space    used 4112K, capacity 4227K, committed 4272K, reserved 1048576K
+Event: 4.112 GC heap after
+Heap after GC invocations=5 (full 1):
+ PSYoungGen      total 187392K, used 10729K [0x000000076c000000, 0x0000000778200000, 0x00000007c0000000)
+  eden space 176640K, 0% used [0x000000076c000000,0x000000076c000000,0x0000000776c80000)
+  from space 10752K, 99% used [0x0000000777780000,0x00000007781fa490,0x0000000778200000)
+  to   space 10752K, 0% used [0x0000000776d00000,0x0000000776d00000,0x0000000777780000)
+ ParOldGen       total 111616K, used 20876K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 18% used [0x00000006c4000000,0x00000006c5463228,0x00000006cad00000)
+ Metaspace       used 33571K, capacity 33960K, committed 34224K, reserved 1079296K
+  class space    used 4112K, capacity 4227K, committed 4272K, reserved 1048576K
+}
+Event: 4.307 GC heap before
+{Heap before GC invocations=6 (full 1):
+ PSYoungGen      total 187392K, used 47770K [0x000000076c000000, 0x0000000778200000, 0x00000007c0000000)
+  eden space 176640K, 20% used [0x000000076c000000,0x000000076e42c740,0x0000000776c80000)
+  from space 10752K, 99% used [0x0000000777780000,0x00000007781fa490,0x0000000778200000)
+  to   space 10752K, 0% used [0x0000000776d00000,0x0000000776d00000,0x0000000777780000)
+ ParOldGen       total 111616K, used 20876K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 18% used [0x00000006c4000000,0x00000006c5463228,0x00000006cad00000)
+ Metaspace       used 34783K, capacity 35220K, committed 35496K, reserved 1081344K
+  class space    used 4196K, capacity 4309K, committed 4400K, reserved 1048576K
+Event: 4.314 GC heap after
+Heap after GC invocations=6 (full 1):
+ PSYoungGen      total 187904K, used 10732K [0x000000076c000000, 0x000000077e380000, 0x00000007c0000000)
+  eden space 177152K, 0% used [0x000000076c000000,0x000000076c000000,0x0000000776d00000)
+  from space 10752K, 99% used [0x0000000776d00000,0x000000077777b010,0x0000000777780000)
+  to   space 19456K, 0% used [0x000000077d080000,0x000000077d080000,0x000000077e380000)
+ ParOldGen       total 111616K, used 24549K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 21% used [0x00000006c4000000,0x00000006c57f95d0,0x00000006cad00000)
+ Metaspace       used 34783K, capacity 35220K, committed 35496K, reserved 1081344K
+  class space    used 4196K, capacity 4309K, committed 4400K, reserved 1048576K
+}
+Event: 4.314 GC heap before
+{Heap before GC invocations=7 (full 2):
+ PSYoungGen      total 187904K, used 10732K [0x000000076c000000, 0x000000077e380000, 0x00000007c0000000)
+  eden space 177152K, 0% used [0x000000076c000000,0x000000076c000000,0x0000000776d00000)
+  from space 10752K, 99% used [0x0000000776d00000,0x000000077777b010,0x0000000777780000)
+  to   space 19456K, 0% used [0x000000077d080000,0x000000077d080000,0x000000077e380000)
+ ParOldGen       total 111616K, used 24549K [0x00000006c4000000, 0x00000006cad00000, 0x000000076c000000)
+  object space 111616K, 21% used [0x00000006c4000000,0x00000006c57f95d0,0x00000006cad00000)
+ Metaspace       used 34783K, capacity 35220K, committed 35496K, reserved 1081344K
+  class space    used 4196K, capacity 4309K, committed 4400K, reserved 1048576K
+Event: 4.366 GC heap after
+Heap after GC invocations=7 (full 2):
+ PSYoungGen      total 187904K, used 0K [0x000000076c000000, 0x000000077e380000, 0x00000007c0000000)
+  eden space 177152K, 0% used [0x000000076c000000,0x000000076c000000,0x0000000776d00000)
+  from space 10752K, 0% used [0x0000000776d00000,0x0000000776d00000,0x0000000777780000)
+  to   space 19456K, 0% used [0x000000077d080000,0x000000077d080000,0x000000077e380000)
+ ParOldGen       total 188928K, used 24142K [0x00000006c4000000, 0x00000006cf880000, 0x000000076c000000)
+  object space 188928K, 12% used [0x00000006c4000000,0x00000006c5793858,0x00000006cf880000)
+ Metaspace       used 34783K, capacity 35220K, committed 35496K, reserved 1081344K
+  class space    used 4196K, capacity 4309K, committed 4400K, reserved 1048576K
+}
+Event: 12.270 GC heap before
+{Heap before GC invocations=8 (full 2):
+ PSYoungGen      total 187904K, used 177152K [0x000000076c000000, 0x000000077e380000, 0x00000007c0000000)
+  eden space 177152K, 100% used [0x000000076c000000,0x0000000776d00000,0x0000000776d00000)
+  from space 10752K, 0% used [0x0000000776d00000,0x0000000776d00000,0x0000000777780000)
+  to   space 19456K, 0% used [0x000000077d080000,0x000000077d080000,0x000000077e380000)
+ ParOldGen       total 188928K, used 24142K [0x00000006c4000000, 0x00000006cf880000, 0x000000076c000000)
+  object space 188928K, 12% used [0x00000006c4000000,0x00000006c5793858,0x00000006cf880000)
+ Metaspace       used 37167K, capacity 37678K, committed 37936K, reserved 1083392K
+  class space    used 4490K, capacity 4618K, committed 4656K, reserved 1048576K
+Event: 12.280 GC heap after
+Heap after GC invocations=8 (full 2):
+ PSYoungGen      total 256000K, used 8280K [0x000000076c000000, 0x000000077d900000, 0x00000007c0000000)
+  eden space 247296K, 0% used [0x000000076c000000,0x000000076c000000,0x000000077b180000)
+  from space 8704K, 95% used [0x000000077d080000,0x000000077d896190,0x000000077d900000)
+  to   space 19968K, 0% used [0x000000077b200000,0x000000077b200000,0x000000077c580000)
+ ParOldGen       total 188928K, used 24150K [0x00000006c4000000, 0x00000006cf880000, 0x000000076c000000)
+  object space 188928K, 12% used [0x00000006c4000000,0x00000006c5795858,0x00000006cf880000)
+ Metaspace       used 37167K, capacity 37678K, committed 37936K, reserved 1083392K
+  class space    used 4490K, capacity 4618K, committed 4656K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 13.255 Thread 0x00000000234c8800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000385541c method=java.lang.Class.annotationData()Ljava/lang/Class$AnnotationData; @ 36
+Event: 13.263 Thread 0x000000001fdb8800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000039fb768 method=java.util.TreeMap.compare(Ljava/lang/Object;Ljava/lang/Object;)I @ 8
+Event: 13.263 Thread 0x00000000203bd800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000039fb768 method=java.util.TreeMap.compare(Ljava/lang/Object;Ljava/lang/Object;)I @ 8
+Event: 13.263 Thread 0x000000002374e800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000039fb768 method=java.util.TreeMap.compare(Ljava/lang/Object;Ljava/lang/Object;)I @ 8
+Event: 13.312 Thread 0x0000000023789000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002cbbd1c method=java.util.zip.ZipCoder.getBytes(Ljava/lang/String;)[B @ 32
+Event: 13.312 Thread 0x0000000023789000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002e04158 method=java.util.zip.ZipCoder.getBytes(Ljava/lang/String;)[B @ 32
+Event: 13.313 Thread 0x0000000023789000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000035ad59c method=java.net.URL.<init>(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V @ 57
+Event: 13.346 Thread 0x0000000020076800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002e9928c method=java.lang.Integer.getChars(II[C)V @ 20
+Event: 13.437 Thread 0x0000000023789800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000319db48 method=sun.nio.cs.UTF_8$Decoder.decode([BII[C)I @ 30
+Event: 13.439 Thread 0x0000000023789800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002d1a894 method=java.util.Properties.getProperty(Ljava/lang/String;)Ljava/lang/String; @ 30
+
+Internal exceptions (10 events):
+Event: 12.507 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/theme/FixedThemeResolverCustomizer> (0x0000000773d2e240) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDictiona
+Event: 12.510 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/ThemeResolverCustomizer> (0x0000000773d45da0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDictionary.cpp, lin
+Event: 12.521 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectCustomizer> (0x0000000773d647b0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 12.524 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/view/DefaultRequestToViewNameTranslatorCustomizer> (0x0000000773d824e8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile
+Event: 12.528 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/RequestToViewNameTranslatorCustomizer> (0x0000000773dab9d0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDicti
+Event: 12.534 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectCustomizer> (0x0000000773de9e00) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 12.537 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/support/AbstractFlashMapManagerCustomizer> (0x0000000773e05e10) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemD
+Event: 12.587 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/support/SessionFlashMapManagerCustomizer> (0x0000000773e25ff0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDi
+Event: 12.590 Thread 0x00000000235b9000 Exception <a 'java/lang/ClassNotFoundException': org/springframework/web/servlet/FlashMapManagerCustomizer> (0x0000000773e3d9d0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\classfile\systemDictionary.cpp, l
+Event: 12.623 Thread 0x00000000234cb800 Implicit null exception at 0x0000000003a239c7 to 0x0000000003a2e9c5
+
+Events (10 events):
+Event: 13.486 loading class com/mysql/jdbc/ConnectionPropertiesImpl$LongConnectionProperty
+Event: 13.486 loading class com/mysql/jdbc/ConnectionPropertiesImpl$LongConnectionProperty done
+Event: 13.486 loading class com/mysql/jdbc/log/NullLogger
+Event: 13.486 loading class com/mysql/jdbc/log/NullLogger done
+Event: 13.486 loading class com/mysql/jdbc/JDBC4Connection
+Event: 13.486 loading class com/mysql/jdbc/JDBC4Connection done
+Event: 13.487 loading class com/mysql/jdbc/JDBC4MySQLConnection
+Event: 13.487 loading class com/mysql/jdbc/JDBC4MySQLConnection done
+Event: 13.488 loading class java/sql/SQLClientInfoException
+Event: 13.488 loading class java/sql/SQLClientInfoException done
+
+
+Dynamic libraries:
+0x00007ff61e900000 - 0x00007ff61e937000 	C:\Program Files\Java\jdk1.8.0_131\bin\java.exe
+0x00007ffbfdf80000 - 0x00007ffbfe170000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffbfc8a0000 - 0x00007ffbfc952000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffbfb0d0000 - 0x00007ffbfb374000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffbfc030000 - 0x00007ffbfc0d3000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffbfd980000 - 0x00007ffbfda1e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffbfd3e0000 - 0x00007ffbfd477000 	C:\Windows\System32\sechost.dll
+0x00007ffbfd2c0000 - 0x00007ffbfd3e0000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffbfd680000 - 0x00007ffbfd814000 	C:\Windows\System32\USER32.dll
+0x00007ffbfb0a0000 - 0x00007ffbfb0c1000 	C:\Windows\System32\win32u.dll
+0x00007ffbfcda0000 - 0x00007ffbfcdc6000 	C:\Windows\System32\GDI32.dll
+0x00007ffbfb450000 - 0x00007ffbfb5e6000 	C:\Windows\System32\gdi32full.dll
+0x00007ffbfbf10000 - 0x00007ffbfbfae000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffbfb680000 - 0x00007ffbfb77a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffbe70a0000 - 0x00007ffbe7324000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.959_none_e6c7bbbf130c62bb\COMCTL32.dll
+0x00007ffbfcf80000 - 0x00007ffbfd2b5000 	C:\Windows\System32\combase.dll
+0x00007ffbfbfb0000 - 0x00007ffbfc030000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffbfc800000 - 0x00007ffbfc82e000 	C:\Windows\System32\IMM32.DLL
+0x000000006fbe0000 - 0x000000006fcb2000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\msvcr100.dll
+0x000000006f340000 - 0x000000006fbdc000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\server\jvm.dll
+0x00007ffbfd550000 - 0x00007ffbfd558000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffbf42b0000 - 0x00007ffbf42b9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffbef110000 - 0x00007ffbef11a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffbf3ee0000 - 0x00007ffbf3f04000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffbfc830000 - 0x00007ffbfc89f000 	C:\Windows\System32\WS2_32.dll
+0x00007ffbf3e30000 - 0x00007ffbf3e5d000 	C:\Windows\SYSTEM32\winmmbase.dll
+0x00007ffbfb050000 - 0x00007ffbfb09a000 	C:\Windows\System32\cfgmgr32.dll
+0x000000006f330000 - 0x000000006f33f000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\verify.dll
+0x000000006f300000 - 0x000000006f329000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\java.dll
+0x000000006e520000 - 0x000000006e543000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\instrument.dll
+0x000000006f2e0000 - 0x000000006f2f6000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\zip.dll
+0x00007ffbfc0f0000 - 0x00007ffbfc7d6000 	C:\Windows\System32\SHELL32.dll
+0x00007ffbfd5c0000 - 0x00007ffbfd669000 	C:\Windows\System32\shcore.dll
+0x00007ffbfb780000 - 0x00007ffbfbf02000 	C:\Windows\System32\windows.storage.dll
+0x00007ffbfaeb0000 - 0x00007ffbfaed3000 	C:\Windows\System32\profapi.dll
+0x00007ffbfae40000 - 0x00007ffbfae8a000 	C:\Windows\System32\powrprof.dll
+0x00007ffbfae30000 - 0x00007ffbfae40000 	C:\Windows\System32\UMPDC.dll
+0x00007ffbfd920000 - 0x00007ffbfd972000 	C:\Windows\System32\shlwapi.dll
+0x00007ffbfae90000 - 0x00007ffbfaea1000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ffbfb430000 - 0x00007ffbfb447000 	C:\Windows\System32\cryptsp.dll
+0x00007ffbf1090000 - 0x00007ffbf10aa000 	E:\IDEA\IntelliJ IDEA 2017.3.7\bin\breakgen64.dll
+0x000000006e500000 - 0x000000006e51a000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\net.dll
+0x00007ffbfa6a0000 - 0x00007ffbfa707000 	C:\Windows\system32\mswsock.dll
+0x000000006e4d0000 - 0x000000006e4dd000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\management.dll
+0x00007ffbdc220000 - 0x00007ffbdc236000 	C:\Windows\system32\napinsp.dll
+0x00007ffbdc200000 - 0x00007ffbdc21a000 	C:\Windows\system32\pnrpnsp.dll
+0x00007ffbfa3f0000 - 0x00007ffbfa4bb000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ffbfc0e0000 - 0x00007ffbfc0e8000 	C:\Windows\System32\NSI.dll
+0x00007ffbfa3b0000 - 0x00007ffbfa3ea000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffbdc1f0000 - 0x00007ffbdc1fe000 	C:\Windows\System32\winrnr.dll
+0x00007ffbf4160000 - 0x00007ffbf417c000 	C:\Windows\system32\NLAapi.dll
+0x00007ffbf31c0000 - 0x00007ffbf31d5000 	C:\Windows\system32\wshbth.dll
+0x00007ffbecd60000 - 0x00007ffbecd6a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffbee670000 - 0x00007ffbee6e7000 	C:\Windows\System32\fwpuclnt.dll
+0x00007ffbfb5f0000 - 0x00007ffbfb616000 	C:\Windows\System32\bcrypt.dll
+0x000000006e4e0000 - 0x000000006e4f1000 	C:\Program Files\Java\jdk1.8.0_131\jre\bin\nio.dll
+0x00007ffbfa210000 - 0x00007ffbfa243000 	C:\Windows\system32\rsaenh.dll
+0x00007ffbfad20000 - 0x00007ffbfad45000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffbfa870000 - 0x00007ffbfa87c000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x00007ffbf04e0000 - 0x00007ffbf04f6000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffbf0430000 - 0x00007ffbf044c000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+
+VM Arguments:
+jvm_args: -javaagent:E:\IDEA\IntelliJ IDEA 2017.3.7\lib\idea_rt.jar=54977:E:\IDEA\IntelliJ IDEA 2017.3.7\bin -Dfile.encoding=UTF-8 
+java_command: cn.xww.miaosha.MainApplication
+java_class_path (initial): C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;E:\miaosha_idea\target\classes;E:\maven\maven_repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;E:\maven\maven_repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;E:\maven\maven_repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;E:\maven\maven_repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;E:\maven\maven_repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_131
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jre1.8.0_131\bin;E:\mysql\bin;E:\maven\apache-maven-3.5.2\bin;E:\redis\redis-2.8.9;C:\Program Files\Git\cmd;C:\Users\25293\AppData\Local\Microsoft\WindowsApps;
+USERNAME=25293
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.959)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 126 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16514280k(9214820k free), swap 29621476k(3120k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.131-b11) for windows-amd64 JRE (1.8.0_131-b11), built on Mar 15 2017 01:23:53 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Jul 27 22:23:03 2020
+elapsed time: 13 seconds (0d 0h 0m 13s)
+
